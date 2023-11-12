@@ -1,0 +1,23 @@
+.carlist {
+    max-width: 60%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 0.5%;
+    justify-content: center;
+}
+
+.car {
+    width: fit-content;
+    margin-bottom: 5%;
+    padding: 5% 10% 5% 10%;
+    border: 1px solid #D4D4D4;
+    border-radius: 10px;
+}
+
+.carName {
+    font-size: 24px;
+}
+
+.carName:hover {
+    color: #1E90FF;
+}
