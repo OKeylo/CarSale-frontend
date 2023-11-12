@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react'
 import './Home.css'
+import Header from '../components/Header';
+
 function Car({car}) {
     return (
         <div className='car'>
@@ -32,6 +34,7 @@ function Home() {
 
   return (
     <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+      <Header />
       <h2>Продажа автомобилей</h2>
       <div className='carlist'>
         {cars?.map((car, i) => {

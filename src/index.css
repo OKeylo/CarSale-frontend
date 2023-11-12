@@ -72,3 +72,10 @@ button:focus-visible {
 p {
   margin: 0;
 }
+
+.logo {
+  padding: 5px 20px 5px 20px;
+  background-color: #f1f1f2;
+  display: flex;
+  justify-content: space-between;
+}
