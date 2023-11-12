@@ -11,9 +11,15 @@ function Login() {
 		event.preventDefault();
 		setErrorMessage("");
 
-		const { username, password } = document.forms[0];
-		const data = {"username": username.value, "password": password.value}
+		const { username, password, phone } = document.forms[0];
+		const data = {"username": username.value, "password": password.value, "phone": phone.value}
 
+		const regex = /^\D{1}\d{1}\s\d{3}\s\d{3}-\d{2}-\d{2}$/;
+		if (!phone.value.match(regex)) {
+			setErrorMessage("Введите корректный номер телефона! Пример +X XXX XXX-XX-XX");
+			return;
+		}
+		
 		await axios.post("http://127.0.0.1:8000/user/signup", data)
 		.then(response => {
 			localStorage.setItem("username", username.value);
@@ -38,6 +44,10 @@ function Login() {
 					<div className="input-container">
 						<label>Password </label>
 						<input type="password" name="password" required />
+					</div>
+					<div className="input-container">
+						<label>Phone </label>
+						<input type="text" name="phone" required />
 					</div>
 					<div className="button-container">
 						<input type="submit" />
