@@ -7,12 +7,12 @@ function Car({car}) {
             <p className='carName'>
                 {car.mark} {car.model}, {car.year}
             </p>
-            <p style={{fontSize: "20px"}}>
+            <p style={{fontSize: "20px", fontWeight: "600", marginBottom: "5%"}}>
                 {car.price} ₽
             </p>
-            <p style={{fontSize: "16px"}}>
-                {car.fuel} ({car.power} л.с.)
-            </p>
+            <p>Характеристики</p>
+            <p>{car.fuel} ({car.power} л.с.)</p>
+            <p>{car.mileage} км</p>
         </div>
     )
 }
@@ -31,14 +31,14 @@ function Home() {
   }, []);
 
   return (
-    <>
+    <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
       <h2>Продажа автомобилей</h2>
       <div className='carlist'>
         {cars?.map((car, i) => {
             return <Car key={i} car={car} />
         })}
       </div>
-    </>
+    </div>
   )
 }
 

@@ -1,13 +1,13 @@
 .carlist {
     max-width: 60%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 35%);
     row-gap: 0.5%;
+    column-gap: 3%;
     justify-content: center;
 }
 
 .car {
-    width: fit-content;
     margin-bottom: 5%;
     padding: 5% 10% 5% 10%;
     border: 1px solid #D4D4D4;
