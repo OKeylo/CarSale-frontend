@@ -1,4 +1,5 @@
 import Logo from "../assets/carsale.png";
+import User from "../assets/user.png"
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from "react";
 
@@ -22,10 +23,13 @@ function Header() {
       </div>
       {username?
       <div style={{display: "flex", alignItems: "center"}}>
-        <p style={{marginRight: "15px"}}>Привет, {username}</p>
+        <p style={{fontSize: "20px", marginRight: "20px"}}>Привет, {username}</p>
+        <a href="/me" className="account">
+          <img src={User} style={{height: "1em", paddingTop: "30%"}} alt="account" />
+        </a>
         <button
         onClick={() => {localStorage.removeItem("username"); localStorage.removeItem("password"); window.location.reload();}}
-        style={{height: "1.5em", width: "6em", borderColor: "#2266D3"}}
+        style={{height: "2em", width: "6em", borderColor: "#2266D3"}}
         >Выйти</button>
       </div>
       :
