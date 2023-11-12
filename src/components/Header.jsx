@@ -6,7 +6,7 @@ function Header() {
 
     return (
         <div className="logo">
-            <div style={{display: "flex", alignItems: "center"}}>
+            <div onClick={() => navigate("/")} style={{display: "flex", alignItems: "center", cursor: "pointer"}}>
                 <img src={Logo} style={{width: "8%", marginRight: "1%"}} alt="logo"/>
                 <p style={{fontSize: 24}}>Car</p>
                 <p style={{fontSize: 24, color: "#2266D3"}}>Sale</p>
