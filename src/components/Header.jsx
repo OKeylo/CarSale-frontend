@@ -1,6 +1,9 @@
 import Logo from "../assets/carsale.png";
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
+    const navigate = useNavigate()
+
     return (
         <div className="logo">
             <div style={{display: "flex", alignItems: "center"}}>
@@ -8,6 +11,7 @@ function Header() {
                 <p style={{fontSize: 24}}>Car</p>
                 <p style={{fontSize: 24, color: "#2266D3"}}>Sale</p>
             </div>
+            <button onClick={() => navigate("/login")} style={{height: "2em", borderColor: "#2266D3"}}>Войти</button>
         </div>
     )
 }
