@@ -1,11 +1,19 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
 	const navigate = useNavigate();
 	const [errorMessage, setErrorMessage] = useState("");
+
+	useEffect(() => {
+		const username = localStorage.getItem("username");
+
+		if (username) {
+			navigate("/");
+		}
+	}, []);
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();

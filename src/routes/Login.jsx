@@ -1,11 +1,19 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
 	const navigate = useNavigate();
 	const [errorMessage, setErrorMessage] = useState("");
+
+	useEffect(() => {
+		const username = localStorage.getItem("username");
+
+		if (username) {
+			navigate("/");
+		}
+	}, []);
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
@@ -30,6 +38,7 @@ function Login() {
 			<Header />
 			<div className="form" style={{display: "flex", flexDirection:"column", alignItems: "center", marginTop: "10%"}}>
 				<form onSubmit={handleSubmit}>
+					<p style={{fontSize: "24px", fontWeight: "600"}}>Вход</p>
 					<div className="input-container">
 						<label>Username </label>
 						<input type="text" name="username" required />
