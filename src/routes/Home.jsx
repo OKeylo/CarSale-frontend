@@ -32,7 +32,7 @@ function Car({car}) {
       </p>
       <div style={{marginBottom: "5%"}}>
         <p style={{fontWeight: "600"}}>Характеристики</p>
-        <p>{car.fuel} ({car.power} л.с.)</p>
+        <p>{car.fuel} л ({car.power} л.с.)</p>
         <p>{car.mileage} км</p>
       </div>
       {user?

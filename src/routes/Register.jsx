@@ -47,21 +47,21 @@ function Login() {
 					<p style={{fontSize: "24px", fontWeight: "600"}}>Регистрация</p>
 					<div className="input-container">
 						<label>Username </label>
-						<input type="text" name="username" required />
+						<input className="input" type="text" name="username" required />
 					</div>
 					<div className="input-container">
 						<label>Password </label>
-						<input type="password" name="password" required />
+						<input className="input" type="password" name="password" required />
 					</div>
 					<div className="input-container">
 						<label>Phone </label>
-						<input type="text" name="phone" required />
+						<input className="input" type="text" name="phone" required />
 					</div>
 					<div className="button-container">
-						<input type="submit" />
+						<input className="input-button" type="submit" />
 					</div>
 				</form>
-				<div>{errorMessage}</div>
+				<div className="error-msg">{errorMessage}</div>
 			</div>
 		</div>
 	)
