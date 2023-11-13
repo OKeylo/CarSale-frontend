@@ -89,9 +89,8 @@ p {
 }
 
 .carlist {
-  max-width: 60%;
   display: grid;
-  grid-template-columns: repeat(4, 35%);
+  grid-template-columns: repeat(4, 250px);
   row-gap: 0.5%;
   column-gap: 3%;
   justify-content: center;
@@ -122,4 +121,61 @@ p {
 
 .account:hover {
   background-color: #d7e6ff;
+}
+
+.remove_car:hover {
+  background-color: #ffd7d7;
+}
+
+.form-car {
+  width: 100%;
+}
+
+label {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  font-size: 16px;
+}
+
+.input:focus {
+  outline: 2px solid #2266D3;
+  border-radius: 1px;
+  border-color: transparent;
+}
+
+.input-button {
+  padding: 2% 6% 2% 6%;
+  background-color: #2266D3;
+  border: 1px solid #2266D3;
+  border-radius: 7px;
+  font-size: 18px;
+  color: white;
+}
+
+.input-button:hover {
+  background-color: white;
+  color: #2266D3;
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; 
+  margin-top: 7%;
+}
+
+.error-msg {
+  text-align: center;
+  margin-top: 4%;
+  color: #FF0000;
+  font-weight: 600;
 }
