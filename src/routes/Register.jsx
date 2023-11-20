@@ -51,7 +51,7 @@ function Login() {
 					</div>
 					<div className="input-container">
 						<label>Password </label>
-						<input className="input" type="password" name="password" required />
+						<input className="input" type="password" name="password" autocomplete="new-password" required />
 					</div>
 					<div className="input-container">
 						<label>Phone </label>
